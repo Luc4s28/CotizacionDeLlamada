@@ -1,0 +1,15 @@
+def cotizacionCliente(cantidad_llamadas,tiempo_comunicion):
+    costComuni=3
+    segunComuni=0.25
+    total_A_Pagar=0
+    if cantidad_llamadas>0:
+        costo=costComuni*cantidad_llamadas
+        total_A_Pagar=total_A_Pagar+costo
+        if tiempo_comunicion>0:
+            costo_tiempo=segunComuni*tiempo_comunicion
+            total_A_Pagar=total_A_Pagar+costo_tiempo
+    return total_A_Pagar
+
+llamadas=int(input("Ingrese la cantidad de llamadas realizadas"))
+tiempo=float(input("Ingrese la cantidad de tiempo de las llamadas"))
+print("El saldo que debe abonar es de : $",cotizacionCliente(llamadas,tiempo))
